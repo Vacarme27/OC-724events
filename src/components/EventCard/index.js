@@ -9,13 +9,13 @@ const EventCard = ({
   date = new Date(),
   title,
   label,
-  small = false,
-  ...props
+  small = false, 
+  ...props 
 }) => (
     <div
       data-testid="card-testid"
       className={`EventCard${small ? " EventCard--small" : ""}`}
-      {...props}
+      {...props}     
     >
       <div className="EventCard__imageContainer">
         <img data-testid="card-image-testid" src={imageSrc} alt={imageAlt} />

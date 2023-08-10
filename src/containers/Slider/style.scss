@@ -2,8 +2,8 @@
 
 .SlideCardList {
   position: relative;
-  width: 100%;
   max-width: 1440px;
+  width: 100%;
   height: 586px;
   .SlideCard {
     width: 100%;
@@ -42,7 +42,7 @@
     &__description {
       left: 0;
       bottom: 50px;
-      width: 857px;
+      max-width: 857px;
       background-color: $primary;
       color: white;
       border-radius: 8px;
