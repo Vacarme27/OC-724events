@@ -23,22 +23,32 @@ describe("When Form is created", () => {
       await screen.findByText("En cours");
       await screen.findByText("Message envoyé !");
     });
-  });
-
+  });  
 });
 
 
 describe("When a page is created", () => {
-  it("a list of events is displayed", () => {
-    // to implement
+  it("a list of events is displayed", async () => {
+    render (<Home />);
+    const evenCardImages = screen.getAllByTestId("card-image-testid");
+    expect(evenCardImages.length).toBe(10);
   })
-  it("a list a people is displayed", () => {
-    // to implement
+  it("a list a people is displayed", async () => {
+    render (<Home />);
+    const peopleCards = screen.getAllByTestId("people-card-testid");
+    expect(peopleCards.length).toBe(6)
   })
-  it("a footer is displayed", () => {
-    // to implement
+  it("a footer is displayed", async () => {
+    render (<Home />);
+    screen.getByText("Notre dernière prestation");
+    screen.getByText("Contactez-nous");
   })
-  it("an event card, with the last event, is displayed", () => {
-    // to implement
-  })
+  it("an event card, with the last event, is displayed",async () => {
+    render (<Home />);
+    const eventCards = screen.getAllByTestId("card-testid");
+    const smallEventCard = eventCards.filter((card) =>
+      card.classList.contains("EventCard--small")
+    );
+    expect(smallEventCard.length).toBe(1);
+  });
 });
