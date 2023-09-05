@@ -2,6 +2,7 @@
 
 .SlideCardList {
   position: relative;
+  overflow: hidden;
   max-width: 1440px;
   width: 100%;
   height: 586px;
@@ -10,7 +11,7 @@
     left: 0;
     top: 0;
     position: absolute;
-    transition: opacity 1s;
+    transition: opacity 1s;    
     &--hide {
       opacity: 0;
     }

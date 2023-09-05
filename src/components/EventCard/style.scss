@@ -6,17 +6,24 @@
   height: 336px;
   cursor: pointer;
   &--small {
-    width: 274px;
+    // width: 274px;
     height: 190px;
+    width: 90%;
+    margin: 0;
     .EventCard__imageContainer {
       height: 126px;
+      width: 100%;
       min-height: auto;
       overflow: hidden;
+    }
+    .EventCard__imageContainer > img{
+      width: 100%;
     }
     .EventCard__descriptionContainer {
       padding: 0;
       padding-top: 12px;
       font-size: 12px;
+      width: 100%;
     }
     .EventCard__month {
       margin-top: 0;

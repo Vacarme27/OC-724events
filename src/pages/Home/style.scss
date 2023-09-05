@@ -68,6 +68,7 @@ main {
 }
 .FormContainer {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   margin-bottom: 32px;
@@ -81,6 +82,9 @@ main {
   .Button {
     width: 207px;
     margin-top: 32px;
+  }
+  form{
+    width: 100%;
   }
 }
 .ListContainer {
@@ -106,11 +110,15 @@ p {
 .row {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  gap: 20px;
 }
 .col {
   display: flex;
+  width: 45%;
   flex-direction: column;
-  margin: 16px;
+  // margin: 16px;
+  margin: 16px 0;
 }
 
 .Pagination {
@@ -140,7 +148,9 @@ footer {
     padding: 32px;
 
     &.contact {
-      padding-left: 64px;
+      // padding-left: 64px;
+      padding: 0 1%;
+      width: 30%;
       div {
         padding-top: 16px;
       }
@@ -155,14 +165,17 @@ footer {
   }
 
   .presta {
-    width: 35%;
+    // width: 35%;
+    width: 30%;
     border-right: 1px solid rgba(91, 50, 255, 0.2);
   }
 
   .description {
-    width: 45%;
+    // width: 45%;
+    width: 30%;
     border-left: 1px solid rgba(91, 50, 255, 0.2);
-    padding: 0px 64px 0px 64px;
+    // padding: 0px 64px 0px 64px;
+    padding: 0 1%;
   }
 
   address {
@@ -190,4 +203,21 @@ footer {
     max-width: 360px;
   }
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+@media screen and (max-width: 767px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    width: 90%!important;
+      .presta {
+        width: 80%;
+      }
+      .description {
+        width: 100%;
+      }
+      .col.contact {
+        width: 100%;
+      }
+  }
 }

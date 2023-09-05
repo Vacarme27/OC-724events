@@ -5,6 +5,7 @@
   flex-direction: column;
   color: $black;
   align-items: flex-start;
+  width: 80%;
   margin: 8px;
   span {
     font-size: 12pt;
@@ -13,7 +14,8 @@
 }
 input {
   height: 60px;
-  min-width: 424px;
+  // min-width: 424px;
+  width: 100%;
   font-size: 16px;
   text-transform: capitalize;
   padding-left: 16px;
@@ -29,7 +31,8 @@ input {
 }
 textarea {
   height: 336px;
-  min-width: 424px;
+  // min-width: 424px;
+  width: 100%;
   font-size: 16px;
   padding: 16px;
   border-radius: 4px;

@@ -23,6 +23,7 @@ const Page = () => {
     cover: "",
     title: "",
     date: "",
+    label: "",    
     ...last,
   };
   return <>
@@ -132,7 +133,7 @@ const Page = () => {
           title={lastProps?.title}
           date={new Date(lastProps?.date)}
           small
-          label="boom"
+          label={lastProps.type}
         />
       </div>
       <div className="col contact">

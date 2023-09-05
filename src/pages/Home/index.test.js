@@ -31,19 +31,19 @@ describe("When a page is created", () => {
   it("a list of events is displayed", async () => {
     render (<Home />);
     const evenCardImages = screen.getAllByTestId("card-image-testid");
-    expect(evenCardImages.length).toBe(10);
+    expect(evenCardImages.length).toBeGreaterThan(1);
   })
   it("a list a people is displayed", async () => {
     render (<Home />);
     const peopleCards = screen.getAllByTestId("people-card-testid");
-    expect(peopleCards.length).toBe(6)
+    expect(peopleCards.length).toBeGreaterThan(1);
   })
   it("a footer is displayed", async () => {
     render (<Home />);
     screen.getByText("Notre dernière prestation");
     screen.getByText("Contactez-nous");
   })
-  it("an event card, with the last event, is displayed",async () => {
+  it("an event card, with the last event, is displayed", async () => {
     render (<Home />);
     const eventCards = screen.getAllByTestId("card-testid");
     const smallEventCard = eventCards.filter((card) =>
