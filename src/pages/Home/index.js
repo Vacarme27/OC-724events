@@ -133,7 +133,7 @@ const Page = () => {
           title={lastProps?.title}
           date={new Date(lastProps?.date)}
           small
-          label={lastProps.type}
+          label={lastProps?.type}
         />
       </div>
       <div className="col contact">
